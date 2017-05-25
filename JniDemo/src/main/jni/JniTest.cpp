@@ -23,7 +23,7 @@ JNIEXPORT void JNICALL Java_com_wang_walker_jnidemo_JniTest_logJniText__
         (JNIEnv * env, jobject obj)
 {
         //找到我们要调用的方法，注意包名+类名
-        jclass clazz = env->FindClass("com/wang/walker/jnidemo/JniCall");
+        jclass clazz = env->FindClass("com/wang/walker/jnidemo/JniCallClass");
         //获取某个静态方法的ID
         //clazz 是我们上面找到的类的字节码文件
         //showToast 是clazz类中的方法名
@@ -41,7 +41,7 @@ JNIEXPORT void JNICALL Java_com_wang_walker_jnidemo_JniTest_logJniText__
 JNIEXPORT void JNICALL Java_com_wang_walker_jnidemo_JniTest_logJniText__Ljava_lang_String_2
         (JNIEnv * env, jobject obj, jstring string)
 {
-        jclass clazz = env->FindClass("com/wang/walker/jnidemo/JniCall");
+        jclass clazz = env->FindClass("com/wang/walker/jnidemo/JniCallClass");
         jmethodID id = env->GetStaticMethodID(clazz, "logTest","(Ljava/lang/String;)V");
         env->CallStaticVoidMethod(clazz,id,string);
 }

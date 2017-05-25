@@ -6,7 +6,8 @@ import android.util.Log;
  * Created by Holaverse on 2017/1/19.
  */
 
-public class JniCall {
+// 通过jniTest.h对此类进行调用
+public class JniCallClass {
     private static final String TAG = "JniCall";
 
     public static void logTest() {

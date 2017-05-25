@@ -8,6 +8,7 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
     TextView textView;
+
     Button button1;
     Button button2;
     Button button3;
@@ -18,6 +19,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         textView = (TextView) findViewById(R.id.text);
+
         button1 = (Button) findViewById(R.id.button1);
         button2 = (Button) findViewById(R.id.button2);
         button3 = (Button) findViewById(R.id.button3);
@@ -25,14 +27,16 @@ public class MainActivity extends AppCompatActivity {
         button1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                textView.setText(JniManager.getJniText());
+                // 通过jni，直接调用so文件里的方法取出结果
+                String text = JniManager.getJniText();
+                textView.setText(text);
             }
         });
         button2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // 假设jniCall是一个SDK，此处模拟Android在java文件中，通过jni，从so文件调用jniCall中的方法
-                // 如果是IOS，可以在OC++文件中，直接通过so文件调用jniCall中的方法
+                // Android在java文件中，通过jniTest.h，从so文件调用jniCall中的方法
+                // 如果是IOS，在OC++文件中，可以直接通过so文件调用jniCall中的方法
                 JniManager.logJniText();
             }
         });

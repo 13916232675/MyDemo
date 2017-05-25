@@ -9,6 +9,7 @@ public class JniManager {
         System.loadLibrary("JniTest");
     }
 
+    // 通过jniTest中的native方法，调用so文件中对应的方法
     private static final JniTest jniTest = new JniTest();
 
     public static String getJniText() {
