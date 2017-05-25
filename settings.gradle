@@ -1,0 +1,3 @@
+include ':MyDemo'
+include ':NativeAdDemo'
+include ':JniDemo'
