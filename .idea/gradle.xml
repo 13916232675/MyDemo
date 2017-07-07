@@ -11,6 +11,7 @@
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/JniDemo" />
             <option value="$PROJECT_DIR$/MyDemo" />
+            <option value="$PROJECT_DIR$/TestTool" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />
