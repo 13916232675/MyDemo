@@ -4,16 +4,13 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.widget.Button;
 
 import com.avidly.testtool.analysis.AnalysisActivity;
 import com.avidly.testtool.packages.Packages;
+import com.avidly.testtool.scale.ScaleActivity;
 import com.hola.sdk.HolaAnalysis;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
-    Button btnPackage;
-    Button btnAnalysis;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -21,11 +18,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         HolaAnalysis.init(this, "800000", "000000");
 
-        btnPackage = (Button) findViewById(R.id.btnPackage);
-        btnAnalysis = (Button) findViewById(R.id.btnAnalysis);
-
-        btnPackage.setOnClickListener(this);
-        btnAnalysis.setOnClickListener(this);
+        findViewById(R.id.btnPackage).setOnClickListener(this);
+        findViewById(R.id.btnAnalysis).setOnClickListener(this);
+        findViewById(R.id.btnScale).setOnClickListener(this);
     }
 
     @Override
@@ -36,6 +31,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         if (v.getId() == R.id.btnAnalysis) {
             startActivity(new Intent(this, AnalysisActivity.class));
+        }
+
+        if (v.getId() == R.id.btnScale) {
+            startActivity(new Intent(this, ScaleActivity.class));
         }
     }
 }
