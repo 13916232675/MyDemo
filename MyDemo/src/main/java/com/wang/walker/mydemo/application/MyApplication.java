@@ -1,4 +1,4 @@
-package com.wang.walker.mydemo;
+package com.wang.walker.mydemo.application;
 
 import android.app.Application;
 

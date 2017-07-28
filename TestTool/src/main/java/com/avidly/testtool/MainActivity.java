@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
 import com.avidly.testtool.analysis.AnalysisActivity;
+import com.avidly.testtool.dexclassloader.DexClassActivity;
 import com.avidly.testtool.packages.Packages;
 import com.avidly.testtool.scale.ScaleActivity;
 import com.hola.sdk.HolaAnalysis;
@@ -16,11 +17,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+
         HolaAnalysis.init(this, "800000", "000000");
 
         findViewById(R.id.btnPackage).setOnClickListener(this);
         findViewById(R.id.btnAnalysis).setOnClickListener(this);
         findViewById(R.id.btnScale).setOnClickListener(this);
+        findViewById(R.id.btnDexClassLoader).setOnClickListener(this);
+
     }
 
     @Override
@@ -35,6 +39,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         if (v.getId() == R.id.btnScale) {
             startActivity(new Intent(this, ScaleActivity.class));
+        }
+        if (v.getId() == R.id.btnDexClassLoader) {
+            startActivity(new Intent(this, DexClassActivity.class));
         }
     }
 }

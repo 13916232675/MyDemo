@@ -36,6 +36,31 @@
         </activity>
         <activity android:name=".scale.ScaleActivity">
         </activity>
+        <activity android:name=".dexclassloader.DexClassActivity">
+        </activity>
+
+
+        <!-- appnext -->
+        <activity
+            android:name="com.appnext.ads.interstitial.InterstitialActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:hardwareAccelerated="true"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"/>
+        <activity
+            android:name="com.appnext.ads.fullscreen.FullscreenActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:hardwareAccelerated="true"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"/>
+        <!-- appnext -->
+
+        <!-- applovin -->
+        <meta-data
+            android:name="applovin.sdk.key"
+            android:value="e-4s7LbXsuJb2oXtoW10amMsJ9scHJhwHmmP6LxzEEZH159qbBqBxA2FKvsbCXWUIHuPdqMs2w840HucShoOtq"/>
+
+        <activity android:name="com.applovin.adview.AppLovinInterstitialActivity"/>
+        <activity android:name="com.applovin.adview.AppLovinConfirmationActivity"/>
+        <!-- applovin -->
     </application>
 
 </manifest>
