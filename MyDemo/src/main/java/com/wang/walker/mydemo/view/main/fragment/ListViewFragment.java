@@ -1,4 +1,4 @@
-package com.wang.walker.mydemo.fragment;
+package com.wang.walker.mydemo.view.main.fragment;
 
 import android.os.Bundle;
 import android.support.v4.app.ListFragment;
@@ -14,11 +14,11 @@ import java.util.List;
  * Created by Holaverse on 2017/7/19.
  */
 
-public class SecondFragment extends ListFragment {
+public class ListViewFragment extends ListFragment {
     private ArrayAdapter<String> adapter;
 
-    public static SecondFragment newInstance() {
-        SecondFragment fragment = new SecondFragment();
+    public static ListViewFragment newInstance() {
+        ListViewFragment fragment = new ListViewFragment();
         return fragment;
     }
 
@@ -28,7 +28,7 @@ public class SecondFragment extends ListFragment {
 
         List<String> data = new ArrayList<>();
         for (int i = 0; i < 30; i++) {
-            data.add("Second Page: " + i);
+            data.add("ListView Page: " + i);
         }
 
         adapter = new ArrayAdapter<>(getActivity(), android.R.layout.simple_list_item_1, data);

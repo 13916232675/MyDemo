@@ -30,7 +30,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".packages.Packages"
+            android:name=".packages.PackagesActivity"
             android:screenOrientation="portrait"/>
         <activity android:name=".analysis.AnalysisActivity">
         </activity>
@@ -38,7 +38,8 @@
         </activity>
         <activity android:name=".dexclassloader.DexClassActivity">
         </activity>
-
+        <activity android:name=".admob.AdmobActivity">
+        </activity>
 
         <!-- appnext -->
         <activity
@@ -52,6 +53,7 @@
             android:hardwareAccelerated="true"
             android:theme="@android:style/Theme.NoTitleBar.Fullscreen"/>
         <!-- appnext -->
+
 
         <!-- applovin -->
         <meta-data

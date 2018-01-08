@@ -38,6 +38,13 @@
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
             android:text="dexclassloader"/>
+
+        <Button
+            android:id="@+id/btnAdmob"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:text="admob"/>
     </LinearLayout>
 
 </ScrollView>

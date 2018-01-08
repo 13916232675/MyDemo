@@ -23,7 +23,7 @@ import java.util.List;
  * Created by Holaverse on 2017/6/15.
  */
 
-public class Packages extends Activity implements View.OnClickListener {
+public class PackagesActivity extends Activity implements View.OnClickListener {
     ListView mListView;
     Button btnInstall;
     Button btnAll;

@@ -1,3 +1,3 @@
-include ':MyDemo', ':TestTool'
+include ':MyDemo'
 //include ':NativeAdDemo'
-include ':JniDemo'
+//include ':JniDemo', ':TestTool'

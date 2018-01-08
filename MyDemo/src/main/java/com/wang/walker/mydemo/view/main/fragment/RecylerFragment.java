@@ -1,4 +1,4 @@
-package com.wang.walker.mydemo.fragment;
+package com.wang.walker.mydemo.view.main.fragment;
 
 import android.annotation.TargetApi;
 import android.os.Build;
@@ -23,11 +23,11 @@ import java.util.List;
  * Created by Holaverse on 2017/7/20.
  */
 
-public class ThirdFragment extends Fragment {
+public class RecylerFragment extends Fragment {
     private List<String> mDatas;
 
-    public static ThirdFragment newInstance() {
-        ThirdFragment fragment = new ThirdFragment();
+    public static RecylerFragment newInstance() {
+        RecylerFragment fragment = new RecylerFragment();
         return fragment;
     }
 
@@ -43,7 +43,7 @@ public class ThirdFragment extends Fragment {
         RecyclerView recyclerView = new RecyclerView(getContext());
         //        recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
         recyclerView.setLayoutManager(new StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL));
-        recyclerView.setAdapter(new ThirdAdapter());
+        recyclerView.setAdapter(new CardAdapter());
         //        recyclerView.addItemDecoration(new DividerItemDecoration(getContext(), DividerItemDecoration.VERTICAL));
         recyclerView.setItemAnimator(new DefaultItemAnimator());
         return recyclerView;
@@ -57,12 +57,12 @@ public class ThirdFragment extends Fragment {
         }
     }
 
-    class ThirdAdapter extends RecyclerView.Adapter<ThirdAdapter.MyViewHolder> {
+    class CardAdapter extends RecyclerView.Adapter<CardAdapter.MyViewHolder> {
 
         @Override
         public MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
             MyViewHolder holder = new MyViewHolder(
-                    LayoutInflater.from(getContext()).inflate(R.layout.fragment_third_item, parent, false));
+                    LayoutInflater.from(getContext()).inflate(R.layout.fragment_card_item, parent, false));
             return holder;
         }
 
@@ -70,7 +70,7 @@ public class ThirdFragment extends Fragment {
         public void onBindViewHolder(MyViewHolder holder, int position) {
             holder.tv.setText(mDatas.get(position));
             ViewGroup.LayoutParams lp = holder.tv.getLayoutParams();
-            float h = TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, position % 7 * 50 + 50,
+            float h = TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, position % 7 * 20 + 50,
                     getContext().getResources().getDisplayMetrics());
             lp.height = (int) h;
             holder.tv.setLayoutParams(lp);

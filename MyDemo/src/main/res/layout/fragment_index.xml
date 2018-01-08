@@ -19,9 +19,23 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="16dp"
                 android:padding="16dp"
-                android:text="button1"/>
+                android:text="ip_activity"/>
 
+            <Button
+                android:id="@+id/button2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:padding="16dp"
+                android:text="github_activity"/>
 
+            <Button
+                android:id="@+id/button3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:padding="16dp"
+                android:text="button3"/>
         </LinearLayout>
 
     </android.support.v4.widget.NestedScrollView>

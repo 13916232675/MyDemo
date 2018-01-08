@@ -1,4 +1,4 @@
-package com.wang.walker.mydemo.activity;
+package com.wang.walker.mydemo.view.main.activity;
 
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -12,10 +12,10 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 
 import com.wang.walker.mydemo.R;
-import com.wang.walker.mydemo.fragment.FirstFragment;
-import com.wang.walker.mydemo.fragment.IndexFragment;
-import com.wang.walker.mydemo.fragment.SecondFragment;
-import com.wang.walker.mydemo.fragment.ThirdFragment;
+import com.wang.walker.mydemo.view.main.fragment.SwipeListFragment;
+import com.wang.walker.mydemo.view.main.fragment.IndexFragment;
+import com.wang.walker.mydemo.view.main.fragment.ListViewFragment;
+import com.wang.walker.mydemo.view.main.fragment.RecylerFragment;
 
 import java.util.ArrayList;
 
@@ -45,9 +45,9 @@ public class MainActivity extends AppCompatActivity {
 
         mSectionsPagerAdapter = new SectionsPagerAdapter(getSupportFragmentManager());
         mSectionsPagerAdapter.addFragment(IndexFragment.newInstance());
-        mSectionsPagerAdapter.addFragment(FirstFragment.newInstance());
-        mSectionsPagerAdapter.addFragment(SecondFragment.newInstance());
-        mSectionsPagerAdapter.addFragment(ThirdFragment.newInstance());
+        mSectionsPagerAdapter.addFragment(SwipeListFragment.newInstance());
+        mSectionsPagerAdapter.addFragment(ListViewFragment.newInstance());
+        mSectionsPagerAdapter.addFragment(RecylerFragment.newInstance());
 
         mViewPager.setAdapter(mSectionsPagerAdapter);
         mTabLayout.setupWithViewPager(mViewPager);
@@ -60,6 +60,7 @@ public class MainActivity extends AppCompatActivity {
 
     public class SectionsPagerAdapter extends FragmentPagerAdapter {
         ArrayList<Fragment> mList = new ArrayList<>();
+        String[] titles = new String[]{"Index", "SwipeRefreshLayout", "ListFragment", "RecylerView"};
 
         public SectionsPagerAdapter(FragmentManager fm) {
             super(fm);
@@ -81,7 +82,7 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         public CharSequence getPageTitle(int position) {
-            return "SECTION " + position;
+            return titles[position];
         }
     }
 }
